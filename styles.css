@@ -1,0 +1,160 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tabel Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    background: #fdfdfd;
+    vertical-align: top;
+    font-size: 0.95rem;
+}
+
+/* Baris genap */
+tr:nth-child(even) td {
+    background: #f8f9fa;
+}
+
+/* Hover effect */
+tr:hover td {
+    background: #ebf3fd;
+    transition: background 0.2s;
+}
+
+/* Foto siswa */
+.foto-siswa {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+td[align="center"] {
+    text-align: center;
+}
+
+/* Tombol aksi */
+td a {
+    margin: 0 6px;
+    padding: 6px 10px;
+    background: #27ae60;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+td a:first-child {
+    background: #f39c12;
+}
+
+td a:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: #3498db;
+    }
+
+    .foto-siswa {
+        width: 70px;
+        height: 70px;
+    }
+}
